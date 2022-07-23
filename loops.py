@@ -1,4 +1,3 @@
-from pprint import pprint
 import random
 
 greetings = ["hello!", "hi!", "greetings!", "hello", "hi", "greetings"]
