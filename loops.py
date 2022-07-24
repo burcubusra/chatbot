@@ -19,6 +19,8 @@ user = user.lower()
 while (user != "no"):
     print("loop starts here")
 
+    # TODO move greeting outside of loop
+
     if (user in greetings):
         new_name = input("who am i speaking to?\n")
         names.append(new_name)
@@ -26,6 +28,7 @@ while (user != "no"):
         answers.append(new_answer)
         user = input(random.choice(responses))
         user = user.lower()
+
         if (user in answers):
             new_answer = input(
                 "good to know " + (random.choice(responses)) + "\n")
