@@ -1,9 +1,5 @@
 import random
 import time
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
 greetings = ["hello!", "hi!", "greetings!", "hello", "hi", "greetings"]
 goodbyes = ["bye.", "goodbye", "see you!", "later!"]
@@ -16,9 +12,7 @@ negatives = ["no", "nope", "i don't like"]
 subjects = ["music", "game", "magic", "song",
             "singing", "sing", "coding", "code", "python"]
 
-user = input(random.choice(greetings) + "\n")
-user = user.lower()
-
+user = input(random.choice(greetings) + "\n").lower()
 
 if (user in greetings):
     new_name = input("who am i speaking to?\n")
@@ -26,8 +20,8 @@ if (user in greetings):
     user = input("welcome " + (new_name) + ", wanna chat?\n")
     answers.append(user)
 
-<<<<<<< Updated upstream
     while (user != "no"):
+
         user = input(random.choice(responses)).lower()
 
         if (user in answers):
@@ -36,34 +30,11 @@ if (user in greetings):
             answers.append(user)
 
             if any(word in user for word in subjects):
-
-                user = input("oh! how nice! tell me more about it.\n")
-
+                user = input("oh! how nice! tell me more about it.\n").lower()
             else:
-
                 user = input(
-                    "that's so cool! maybe we can do it together sometime? ")
+                    "that's so cool! maybe we can do it together sometime? ").lower()
 
-    if (user == "no"):
-        print("allright then." + (random.choice(goodbyes)) + "\n")
-        time.sleep(3)
-=======
-         if (user in answers):
-             user = input(
-                "good to know " + (random.choice(responses)) + "\n")
-             answers.append(user)
-             user = user.lower()
-             
-             
-             if any(word in user for word in subjects):
-                 user = input ( "oh! how nice! tell me more about it.\n")
-      
-             else:
-                user = input ("that's so cool! maybe we can do it together sometime? ")
-                
-        if (user == "no"):          
-          
-            print ("allright then." + (random.choice(goodbyes)) + "\n")
-            
+        if (user == "no"):
+            print("allright then." + (random.choice(goodbyes)) + "\n")
             time.sleep(3)
->>>>>>> Stashed changes
