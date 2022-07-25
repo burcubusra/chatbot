@@ -1,3 +1,4 @@
+
 import random
 
 greetings = ["hello!", "hi!", "greetings!", "hello", "hi", "greetings"]
@@ -10,38 +11,39 @@ negatives = ["no", "nope", "i don't like"]
 
 subjects = [
     "music", "game", "magic", "song",
-    "singing", "sing", "coding", "code", "python"
-]
+    "singing", "sing", "coding", "code", "python" ]
 
 user = input(random.choice(greetings) + "\n")
 user = user.lower()
-
-while (user != "no"):
-    print("loop starts here")
-
-    # TODO move greeting outside of loop
-
-    if (user in greetings):
+    
+if (user in greetings):
         new_name = input("who am i speaking to?\n")
         names.append(new_name)
         new_answer = input("welcome " + (new_name) + ", wanna chat?\n")
         answers.append(new_answer)
-        user = input(random.choice(responses))
-        user = user.lower()
-
-        if (user in answers):
-            new_answer = input(
+        
+        while (user != "no"):
+            
+         user = input(random.choice(responses))
+         user = user.lower()
+         
+         if (user in answers):
+            user = new_answer = input(
                 "good to know " + (random.choice(responses)) + "\n")
             answers.append(new_answer)
-
-            found_subject = False
-            for sub in subjects:
-                if sub in new_answer:
-                    found_subject = True
-
-            if(found_subject):
-                new_subject = input(
-                    "oh! how nice! tell me more about it.\n")
-                subjects.append(new_subject)
+            user = user.lower()
+            
+            if any(word in new_answer for word in subjects):
+               
+               user = input("oh! how nice! tell me more about it.\n")
+               
+              
             else:
-                input("that's so cool! maybe we can do it together sometime? ")
+              
+              user = input("that's so cool! maybe we can do it together sometime? ")
+                 
+        if (user == "no"):
+          
+          print ("allright then." + (random.choice(goodbyes)) + " ")
+          import time
+          time.sleep(3)
