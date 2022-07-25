@@ -1,7 +1,6 @@
 from posixpath import split
 from pprint import pprint
 import random
-from re import sub
 
 
 greetings = ["hello!", "hi!", "greetings!", "hello", "hi", "greetings"]
@@ -48,5 +47,8 @@ if (user in greetings):
                  
         if (user == "no"):
           
-          user = input ("allright then." + (random.choice(goodbyes)) + "\n")
-        
+          print ("allright then." + (random.choice(goodbyes)) + "\n")
+          import time
+          time.sleep(3)
+       
+         
